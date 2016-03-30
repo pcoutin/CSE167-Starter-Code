@@ -94,7 +94,7 @@ int main(int argc, char** argv) {
 	if (!glfwInit())
 	{
 		fprintf(stderr, "Failed to initialize GLFW\n");
-		return NULL;
+		return -1;
 	}
 
 	// 4x antialiasing
@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
 	{
 		fprintf(stderr, "Failed to open GLFW window.\n");
 		glfwTerminate();
-		return NULL;
+		return -1;
 	}
 
 	// Make the context of the window
